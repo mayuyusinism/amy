@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYOTO: THE SILENT MEMORY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Special+Elite&family=Be+Vietnam+Pro:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sakura-container"></div>
+    <div class="scanline"></div>
+    <div id="vignette"></div>
+
+    <div id="start-screen" class="overlay" style="background-image: url('https://i.pinimg.com/1200x/8b/43/32/8b4332027a10fc1ab6ec3f596070cf28.jpg'); background-size: cover; background-position: center;">
+        <div class="central-node" style="background: rgba(0,0,0,0.7); padding: 50px; border-radius: 15px; border: 1px solid var(--gold);">
+            <h1 class="glitch" data-text="KYOTO 2026">KYOTO 2026</h1>
+            <p class="subtitle">An Interactive And Easy Detective Experience for Amy</p>
+            <div class="divider"></div>
+            <button class="btn-start" onclick="beginAdventure()">INITIALIZE CASE</button>
+        </div>
+    </div>
+
+    <main id="main-interface" class="hidden">
+        <div id="dynamic-bg"></div>
+        <div id="terminal-top" class="hidden">
+            <div class="terminal-header">DECODER</div>
+            <input type="text" id="master-input" placeholder="Enter deduction..." autocomplete="off">
+        </div>
+        <div id="puzzle-viewport"></div>
+        <div id="dialogue-container" class="hidden">
+            <div class="dialogue-box">
+                <div id="speaker-tag"></div>
+                <div id="text-canvas"></div>
+                <div id="choice-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="final-stage" class="overlay hidden">
+        <div class="envelope-wrapper" onclick="handleEnvelopeClick()">
+            <div class="envelope" id="main-envelope">
+                <div class="front"></div>
+                <div class="top-flap" id="envelope-flap"></div>
+                <div class="letter" id="inner-letter">
+                    <div class="letter-preview">🌸 For Amy</div>
+                </div>
+            </div>
+        </div>
+        <p class="instruction">Tap the seal to open...</p>
+    </div>
+
+    <div id="letter-read-mode" class="overlay hidden">
+        <div class="full-letter">
+            <h1 class="letter-title">To my dear Amy,</h1>
+            <div class="letter-body">
+                <p>Hello Amy iu dấu đẹp gái,</p>
+                <p>Hành trình tìm kiếm những mảnh ghép cuối cùng cũng dẫn chị đến đây. Cuộc sống đôi khi cũng đầy những nút thắt khó gỡ, nhưng thật may mắn vì chị vẫn luôn phấn đấu mỗi ngày.</p>
+                <p>Cảm ơn chị vì đã giúp em vượt qua bao nhiêu khó khăn, vì đã luôn là người chị ấm áp, đẹp gái và dễ thương nhất mà em biết. Trong mắt em, chị luôn tỏa sáng theo cách riêng của mình.</p>
+                <p>Tuổi 20 em mong chị Amy của em sẽ luôn hạnh phúc, rực rỡ và tự do làm những điều chị muốn. Chúc mừng sinh nhật Amyyyyyyy!!!!!!</p>
+                <p style="text-align: right; margin-top: 30px;"><strong>Mazu cuti (gem hơi chán với thoại ba chấm tại em nghĩ hỏng ra được gì cho hay hêh).</strong></p>
+            </div>
+            <button class="btn-close" onclick="location.reload()">Close Memories</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
