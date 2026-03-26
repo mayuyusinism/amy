@@ -25,7 +25,7 @@ const GAME_DATA = {
             id: 's2_intro', 
             bg: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1600', 
             speaker: 'J02', 
-            text: "Correct. Now, we move to Gion. The lanterns here whisper a name... not in numbers, but the month khi mùa xuân thực sự bắt đầu. What is the 3rd month called?", 
+            text: "Correct. Now, we move to Gion. The lanterns here whisper a name... not in numbers, but the month when spring truly starts. What is the 3rd month called?", 
             choices: [{ text: "Decipher the Month", next: 'input_wait' }] 
         },
         { 
